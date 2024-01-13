@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tops Exam</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!---------------------------------------- Quest 1 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 1 )</h2>
+            <p>What are HTML Attributes explaine with two examples ?</p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>HTML attributes provide additional information about HTML elements and are always included in the opening tag.</p> 
+            <p>They come in name/value pairs and are used to modify or customize the behavior of HTML elements.</p>
+            <p>Here are two examples of HTML attributes:</p>
+            <!-- Attribute 1 -->
+            <p><span class="font-bold">1. href attribute in &lt;a&gt; (anchor) tag:</span></p>
+            <p>The href attribute is commonly used with the <a> (anchor) tag to define the hyperlink's destination. It specifies the URL or the location to which the user should be redirected when they click on the link.</p>
+            <p>Examples : &lt;a href="https://bhargavtalpada.netlify.app/"&gt;My Portfolio&lt;/a&gt;</p>
+            <p>In this example, the href attribute is set to "https://bhargavtalpada.netlify.app/" indicating that clicking on the link will take the user to the Example Website.</p>  
+            <!-- Attribute 2 -->
+            <p><span class="font-bold">2. src attribute in &lt;img&gt; (image) tag:</span></p>
+            <p>The src attribute is used with the &lt;img&gt; tag to specify the source (URL or file path) of the image to be displayed on the web page.</p>
+            <p>Examples : &lt;img src="image.jpg" alt="A beautiful landscape"&gt</p>
+            <p>Here, the src attribute is set to "image.jpg," indicating that the image file named "image.jpg" is the source of the image. The alt attribute provides alternative text for the image, which is displayed if the image cannot be loaded or for accessibility purposes.</p>    
+        </div>
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 2 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 2 )</h2>
+            <p>What is a marquee in HTML? explaine with two examples ?</p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>In HTML, the &lt;marquee&gt; element was historically used to create a scrolling or moving text or image effect on a web page.</p> 
+            <p>Here are two examples of Marquee tag:</p>
+            <!-- Example 1 -->
+            <p class="font-bold">1. Scrolling Text</p>
+            <p>Examples : &lt;h1&gt;Scrolling Text using &lt;marquee&gt;&lt;/h1&gt;</p>
+            <p class="ml-20">&lt;marquee behavior="scroll" direction="left" scrollamount="5"&gt;
+                This is a scrolling text example using the &lt;marquee&gt; element.
+            &lt;/marquee&gt;</p>
+            <p>In this example, the text within the &lt;marquee&gt; element will scroll horizontally to the left with a scroll amount of 5 pixels.</p>  
+            <!-- Example 2 -->
+            <p class="font-bold">2. &lt;h1&gt;Scrolling Image using &lt;marquee&gt;&lt;/h1&gt;</p>
+            <p>Examples : &lt;img src="image.jpg" alt="A beautiful landscape"&gt</p>
+            <p class="ml-20">&lt;marquee behavior="scroll" direction="right" scrollamount="3"&gt;
+                &lt;img src="scrolling-image.jpg" alt="Scrolling Image"&gt;
+            &lt;/marquee&gt;</p> 
+            <p>In this example, an image (scrolling-image.jpg) is placed within the &lt;marquee&gt; element, and it will scroll horizontally to the right with a scroll amount of 3 pixels.</p>   
+        </div>
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 3 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 3 )</h2>
+            <p>Define the list types in HTML? explaine with examples of navbar and apply a dropdown in navbar also ?</p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>In HTML, there are various ways to create lists, and each has its specific use case. </p> 
+            <p>Common list types include ordered lists (&lt;ol&gt;), unordered lists (&lt;ul&gt;), and definition lists (&lt;dl&gt;).</p>
+            <!-- Example 1 -->
+            <p>Examples :
+                <style>
+                    /* Style for the navbar */
+                    ul.navbar {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        background-color: #333;
+                        overflow: hidden;
+                    }
+            
+                    li.nav-item {
+                        float: left;
+                    }
+            
+                    li.nav-item a, .dropdown-content a {
+                        display: block;
+                        color: white;
+                        text-align: center;
+                        padding: 14px 16px;
+                        text-decoration: none;
+                    }
+            
+                    li.nav-item a:hover, .dropdown-content a:hover {
+                        background-color: #555;
+                    }
+            
+                    /* Style for dropdowns */
+                    .dropdown {
+                        display: inline-block;
+                    }
+            
+                    .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        background-color: #333;
+                        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                        z-index: 1;
+                    }
+            
+                    .dropdown:hover .dropdown-content {
+                        display: block;
+                    }
+                </style>
+                <ul class="navbar">
+                    <li class="nav-item"><a href="#home">Home</a></li>
+                    <li class="nav-item"><a href="#about">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="dropbtn">Mercedes</a>
+                        <!-- Dropdown content -->
+                        <div class="dropdown-content">
+                            <a href="#service1">Volvo</a>
+                            <a href="#service2">Tesla</a>
+                            <a href="#service3">Mercedes</a>
+                        </div>
+                    </li>
+                </ul>
+            </p>  <br>
+            <p>The navbar is created using an unordered list (&lt;ul&gt;) with list items (&lt;li&gt;) for each menu item.</p>
+        </div>  
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 4 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 4 )</h2>
+            <p>What are void elements in HTML?explaine with examples 5 void elements?</p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>Void elements, also known as self-closing or empty elements, are elements in HTML that do not have a closing tag.</p> 
+            <p>Instead of using both opening and closing tags, void elements are written as a single tag. Here are five examples of void elements in HTML:</p>
+            <!-- Example 1 -->
+            <p class="font-bold">1. &lt;img&gt; - Image Element:</p>
+            <p>The &lt;img&gt; element is used to embed images on a web page</p>  
+            <p>Examples : &lt;img src="example.jpg" alt="Example Image"&gt; </p>
+            <!-- Example 2 -->
+            <p class="font-bold">2. &lt;br&gt; - Line Break Element:</p>
+            <p>The &lt;br&gt; element is used to insert a line break within text or other inline </p>   
+            <p>Examples : &lt;p&gt; This is a paragraph. &lt;br&gt; Here is a line break.&lt;/p&gt; </p>
+            <!-- Example 3 -->
+            <p class="font-bold">3. &lt;input&gt; - Input Element:</p>
+            <p>The &lt;input&gt; element is used to create various types of form controls, such as text fields, checkboxes, and radio buttons.</p>   
+            <p>Examples : &lt;input type="text" name="username" placeholder="Enter your username"&gt;</p>
+            <!-- Example 4 -->
+            <p class="font-bold">4. &lt;hr&gt; - Horizontal Rule Element:</p>
+            <p>The &lt;hr&gt; element is used to represent a thematic break or horizontal line on the page.</p>   
+            <p>Examples : &lt;hr&gt;</p>
+            <!-- Example 5 -->
+            <p class="font-bold">5. &lt;meta&gt; - Metadata Element:</p>
+            <p>The &lt;meta&gt; element is used to provide metadata about the HTML document, such as character set, viewport settings, or author information.</p>   
+            <p>Examples : &lt;meta charset="UTF-8"&gt; </p>
+        </div>
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 5 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 5 )</h2>
+            <p>What are HTML Entities? explain examples of two entities.</p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>HTML entities are special codes or character references used to represent characters that have a specific meaning in HTML or that are not easily typable or displayable in a web page.</p> 
+            <p>HTML entities are often used to include special characters, reserved characters, or characters with a specific meaning without interfering with the HTML structure.</p>
+            <p> Entities are written using the & (ampersand) and ; (semicolon) delimiters.</p>
+            <!-- Example 1 -->
+            <p class="font-bold">1. &lt; - Less Than (&lt;):</p>
+            <p>The &lt; entity represents the less-than symbol (&lt;). It is used when you want to display the less-than sign without it being interpreted as an HTML tag.</p>  
+            <p>Examples : &lt;p&gt;This is an example of the &lt;p&gt; tag.&lt;/p&gt; </p>
+            <!-- Example 2 -->
+            <p class="font-bold">2. &copy; - Copyright Symbol (©):</p>
+            <p>The &copy; entity represents the copyright symbol (©). It is commonly used to indicate copyright ownership on a web page.</p>   
+            <p>Examples : The &copy; entity represents the copyright symbol (©). It is commonly used to indicate copyright ownership on a web page.</p>
+        </div>
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 6 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 6 )</h2>
+            <p>What do you understand by the universal sector explain with examples?</p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>It seems there might be a confusion or a misunderstanding regarding the term "universal sector" in the context of HTML.</p> 
+            <p>As of my last knowledge update in January 2022, there is no widely recognized concept or element called the "universal sector" in HTML.</p>
+        </div>
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 7 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 7 )</h2>
+            <p>What are the elements of the CSS Box Model? explain with examples?</p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>The CSS (Cascading Style Sheets) Box Model is a fundamental concept that describes the layout and spacing of elements on a web page. </p> 
+            <p>It consists of several elements, each contributing to the overall size and spacing of an element.</p>
+            <p> The primary components of the CSS Box Model include:</p>
+            <!-- component 1 -->
+            <p class="font-bold">1. Content</p>
+            <p>The actual content of the box, where text, images, or other media are displayed.</p>  
+            <!-- component 2 -->
+            <p class="font-bold">2. Padding:</p>
+            <p>The space between the content and the border. It provides inner spacing within the box.</p>   
+            <p>Examples : div { <br>
+                padding: 20px; /* Applying padding of 20 pixels to all sides of the div */ <br>
+              } <br>
+            </p>
+            <!-- component 3 -->
+            <p class="font-bold">3. Border:</p>
+            <p>The border surrounds the content and padding. It is the visible boundary of the box.</p>   
+            <p>Examples : div { <br>
+                    border: 2px solid #000; /* Applying a solid black border with a width of 2 pixels */ <br>
+                } <br>
+            </p>
+            <!-- component 4 -->
+            <p class="font-bold">4. Margin:</p>
+            <p>The space outside the border, creating separation between the element and its surrounding elements.</p>   
+            <p>Examples : div { <br>
+                margin: 10px; /* Applying margin of 10 pixels to all sides of the div */ <br>
+              } <br>
+            </p>
+        </div>
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 8 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 8 )</h2>
+            <p>What is meant by RGB stream?  set a background color of webpage using RGB stream?</p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p> RGB typically stands for Red, Green, and Blue, which are the primary colors used in the RGB color model.</p> 
+            <p>If you're looking to set a background color of a webpage using the RGB color model, you can use the rgb() function in CSS. </p>
+            <p>If you're looking to set a background color of a webpage using the RGB color model, you can use the rgb() function in CSS. </p>
+            <p>Example : 
+                &lt;html&gt;  <br>
+                &lt;head&gt;  <br>
+                    &lt;style&gt;  <br>
+                        body {  <br>
+                            background-color: rgb(255, 0, 0); /* Red background */  <br>
+                        }  <br>
+                    &lt;/style&gt;  <br>
+                &lt;/head&gt;  <br>
+                &lt;body&gt;  <br>
+                    &lt;h1&gt;This is a webpage with an RGB background color.&lt;/h1&gt;  <br>
+                &lt;/body&gt;  <br>
+                &lt;/html&gt;  <br>
+            </p>
+        </div>
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 9 & 11 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 9/11 )</h2>
+            <p>Define z-index ? create examples as look like this examples using z-index.</p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>The z-index property in CSS is used to control the stacking order of positioned elements. </p> 
+            <p>An element with a higher z-index value is positioned in front of elements with lower z-index values.</p>
+            <p>If two elements have the same z-index, the one that appears later in the HTML source order will be placed on top.
+            <p>Example : 
+            <!-- <style>
+                .box {
+                width: 150px;
+                height: 150px;
+                position: absolute;
+                margin: 20px;
+                border: 2px solid #000;
+                }
+
+                #box1 {
+                background-color: red;
+                z-index: 1;
+                }
+
+                #box2 {
+                background-color: blue;
+                margin-top: 60px;
+                    z-index: 10;
+                    margin-left: 60px;
+                }
+                #box3 {
+                background-color: green;
+                margin-top: 100px;
+                    z-index: 10;
+                    margin-left: 100px;
+                }
+            </style>
+            <div id="box1" class="box">Box 1 </div>
+            <div id="box2" class="box">Box 2 </div>
+            <div id="box3" class="box">Box 3 </div> -->
+
+            </p>
+        </div>
+    </div>
+    <hr class="border border-black ">
+
+
+    <!---------------------------------------- Quest 10 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 10 )</h2>
+            <p>What are Root variables is CSS ? </p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p> CSS variables, also known as Custom Properties, allow you to define reusable values in your stylesheets. </p> 
+            <p>These variables can be used to store and reuse values, making it easier to manage styles and ensure consistency across your website.</p>
+            <p> CSS variables are prefixed with -- (double dash) and are case-sensitive.</p>
+            <p>Variables declared at the :root level are global and can be accessed from anywhere in the stylesheet</p>
+            <p>Example : 
+            </p>
+        </div>
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 12 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 12 )</h2>
+            <p>Write a JavaScript program to display the current day and time ? </p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>Example : 
+                <script>
+                    // Get the current date and time
+                    var currentDate = new Date();
+                
+                    // Get the day of the week (0-6, where 0 is Sunday and 6 is Saturday)
+                    var dayOfWeek = currentDate.getDay();
+                
+                    // Array to map day index to day name
+                    var daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                
+                    // Get the current time
+                    var currentTime = currentDate.toLocaleTimeString();
+                  </script>
+                <p>Output : <script>document.write("Today is " + daysOfWeek[dayOfWeek] + " and the current time is " + currentTime);</script></p>
+            </p>
+        </div>
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 13 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 13 )</h2>
+            <p>Write a JavaScript program to print the current window contents?</p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>Example :
+                <p>Click on button and print current window</p>
+                <button onclick="printWindowContents()" class="border border-blue-500 text-white bg-blue-500 rounded p-2 ">Print Window Contents</button>
+                <script>
+                    function printWindowContents() {
+                        window.print();
+                    }
+                </script> 
+            </p>
+        </div>
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 14 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 14 )</h2>
+            <p>Write a JavaScript program to calculate multiplication and division of two numbers (input from the user) ?</p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>Example :
+                <form id="calculatorForm">
+                    <label for="num1">Enter the first number: </label>
+                    <input type="number" id="num1" class="border border-black" required>
+                    <br>
+
+                    <label for="num2">Enter the second number: </label>
+                    <input type="number" id="num2" class="border border-black" required>
+                    <br>
+
+                    <button type="button" class="border border-blue-500 text-white bg-blue-500 rounded p-2" onclick="multiplication()">Multiplication</button>
+                    <button type="button" class="border border-blue-500 text-white bg-blue-500 rounded p-2" onclick="division()">Division</button>
+                </form>
+
+                <h3>Output : <p id="result"></p> </h3>
+                <script>
+                    function multiplication() {
+                      // Get input values from the form
+                      var num1 = parseFloat(document.getElementById('num1').value);
+                      var num2 = parseFloat(document.getElementById('num2').value);
+
+                      // Calculate multiplication
+                      var multiplicationResult = num1 * num2;
+                      
+                
+                      // Display results
+                      document.getElementById('result').innerHTML =
+                        'Multiplication: ' + multiplicationResult;
+                    }
+                    function division(){
+                        // Get input values from the form
+                        var num1 = parseFloat(document.getElementById('num1').value);
+                        var num2 = parseFloat(document.getElementById('num2').value);
+                           
+                        // division
+                        var divisionResult = (num2 !== 0) ? num1 / num2 : 'Cannot divide by zero';
+
+                        //display result
+                        document.getElementById('result').innerHTML = 
+                        'Division: ' + divisionResult;
+                    }
+                  </script>
+            </p>
+        </div>
+    </div>
+    <hr class="border border-black">
+
+    
+    <!---------------------------------------- Quest 15 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 15 )</h2>
+            <p>Write a JavaScript function that reverses a number?</p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>Example :
+                <input type="text" placeholder="Enter Number" id="num" class="border border-black"/>
+                <button onclick="reverseNumber()" class="border border-blue-500 text-white bg-blue-500 rounded p-2 ">Reverse Number</button>
+                <h3>Output : <p id="output"></p></h3>
+                <script>
+                    function reverseNumber() {
+                        // Take input from the user
+                        var userInput = parseFloat(document.getElementById('num').value);
+
+                        // Convert the user input to a number
+                        var number = parseFloat(userInput);
+
+                        // Convert the number to a string
+                        var numString = number.toString();
+
+                        // Reverse the string
+                        var reversedString = numString.split('').reverse().join('');
+
+                        // Convert the reversed string back to a number
+                        var reversedNumber = parseFloat(reversedString);
+
+                        // Display the result
+                        document.getElementById('output').innerHTML = 
+                        'Original Number: ' + number + '\n\nReversed Number: ' + reversedNumber
+                        }
+                </script> 
+            </p>
+        </div>
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 16, 17 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 16, 17 )</h2>
+            <p>Write a JavaScript function to get the function name. </p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>Example :
+                <script>
+                    function getFunctionName(func) {
+                        if (typeof func === 'function') {
+                            return func.name || 'Anonymous Function';
+                        } else {
+                            throw new Error('Argument is not a function');
+                        }
+                    }
+
+                    // Example usage:
+                    function myFunction() {
+                        // Function logic
+                    }
+
+                    const functionName = getFunctionName(myFunction);
+                    document.write('Function Name: ', functionName);
+                </script> 
+            </p>
+        </div>
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 18, 19 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 18, 19 )</h2>
+            <p>Write a JavaScript function to generate a random integer. . </p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>Example :
+                <button onclick="rendomnum()" class="border border-blue-500 text-white bg-blue-500 rounded p-2 ">Generate Number</button>
+                <p id="randomnumber"></p>
+                <script>
+                    function rendomnum(){
+                        let num = Math.floor(10000 - Math.random() * 9000)
+                        document.getElementById('randomnumber').innerHTML = num
+                    }
+                </script> 
+            </p>
+        </div>
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 20, 21 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 20, 21 )</h2>
+            <p>Write a JavaScript function to find the highest value in an array. </p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>Example :
+                <p id="maxnumber"></p>
+                <script>
+                    let arr = [10,12,265,2,85,100]
+                    let maxnum = Math.max(...arr)
+                    document.getElementById('maxnumber').innerHTML = maxnum
+
+                </script> 
+            </p>
+        </div>
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 22 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 22 )</h2>
+            <p>write a code in javascript to apply validations of form </p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>Example :
+                <form action="" onsubmit="return validateForm()">
+                    <input type="text" placeholder="Enter User Name" id="unm" class="sm:w-60 my-3 p-3 border border-black"><br>
+                    <p id="unmerror" class="text-red-600 m-0 text-left"></p>
+                    <input type="text" placeholder="Enter Email" id="eml" class="sm:w-60 my-3 p-3 border border-black"><br>
+                    <p id="emlerror" class="text-red-600 m-0 text-left"></p>
+                    <input type="password" placeholder="Enter Password" id="pwd" class="sm:w-60 my-3 p-3 border border-black"><br>
+                    <p id="pwderror" class="text-red-600 m-0 text-left"></p>
+                    <input type="submit" class="border border-black w-48 sm:w-60 my-3 p-3 bg-cyan-500"></input>
+                </form>
+                <script>
+                    let unm = document.getElementById('unm');
+                    let eml = document.getElementById('eml');
+                    let pwd = document.getElementById('pwd');
+                    let flag = 1;
+
+                    function validateForm(){
+                        if (unm.value == "") {
+                            document.getElementById('unmerror').innerHTML = "Please Enter Username..."
+                            flag = 0;
+                        }else{
+                            document.getElementById('unmerror').innerHTML = "";
+                            flag = 1;
+                        } 
+                        
+                        if (eml.value == "") {
+                            document.getElementById('emlerror').innerHTML = "Please Enter Email..."
+                            flag = 0;
+                        }else{
+                            document.getElementById('emlerror').innerHTML = "";
+                            flag = 1;
+                        }
+
+                        if (pwd.value == "") {
+                            document.getElementById('pwderror').innerHTML = "Please Enter Password..."
+                            flag = 0;
+                        }else{
+                            document.getElementById('unmerror').innerHTML = "";
+                            flag = 1;
+                        }
+                        
+                        if (flag) {
+                            return true;
+                        }else{
+                            return false;
+                        }
+                    }
+                </script> 
+            </p>
+        </div>
+    </div>
+    <hr class="border border-black">
+
+
+    <!---------------------------------------- Quest 23 and Answer ---------------------------------------->
+    <div class="p-4">
+        <div class="flex items-center text-2xl gap-3">
+            <h2 class="font-semibold">Quest :- 23 )</h2>
+            create a calculator of just like following output in javascript perform all aithmatic concepts and calculations inside of calculator. </p>
+        </div>
+        <div class="text-lg">
+            <h3 class="font-semibold ">Ans :- </h3>
+            <p>Example :
+                <div class="container flex justify-center items-center">
+                    <div class="calculator mx-12 my-0 bg-transparent border border-black rounded-lg px-4 py-1">
+            
+                        <div class="result">
+                            <input type="text" class="result_input w-full border-none px-1 py-3 text-right text-2xl focus:outline-none" placeholder="0">
+                        </div>
+                        <div class="button_field">
+                            <div class="button_row_1">
+                                <button class="btn bg-blue-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="%" type="button" onclick="return inpt_value(this.value)">%</button>
+                                <button class="btn bg-blue-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" onclick=" sqrt_value()"><sup>2</sup>√x</button>
+                                <button class="btn bg-blue-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" onclick="power()">X<sup>2</sup></button>
+                                <button class="btn bg-blue-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" onclick=" one_of()">1/x</button>
+                            </div>
+                            <div class="button_row_1">
+                                <button class="btn bg-green-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" onclick="clear_input()">CE</button>
+                                <button class="btn bg-green-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" onclick="clear_input()">C</button>
+                                <button class="btn bg-green-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" onclick="remove()"> <- </button>
+                                <button class="btn bg-blue-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="/" onclick="return inpt_value(this.value)">&divide;</button>
+                            </div>
+                            <div class="button_row_1">
+                                <button class="btn bg-green-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="7" onclick="return inpt_value(this.value)">7</button>
+                                <button class="btn bg-green-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="8" onclick="return inpt_value(this.value)">8</button>
+                                <button class="btn bg-green-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="9" onclick="return inpt_value(this.value)">9</button>
+                                <button class="btn bg-blue-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="*" onclick="return inpt_value(this.value)">X</button>
+                            </div>
+                            <div class="button_row_1">
+                                <button class="btn bg-green-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="4" onclick="return inpt_value(this.value)">4</button>
+                                <button class="btn bg-green-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="5" onclick="return inpt_value(this.value)">5</button>
+                                <button class="btn bg-green-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="6" onclick="return inpt_value(this.value)">6</button>
+                                <button class="btn bg-blue-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="-" onclick="return inpt_value(this.value)">-</button>
+                            </div>
+                            <div class="button_row_1">
+                                <button class="btn bg-green-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="1" onclick="return inpt_value(this.value)">1</button>
+                                <button class="btn bg-green-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="2" onclick="return inpt_value(this.value)">2</button>
+                                <button class="btn bg-green-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="3" onclick="return inpt_value(this.value)">3</button>
+                                <button class="btn bg-blue-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="+" onclick="return inpt_value(this.value)">+</button>
+                            </div>
+                            <div class="button_row_1">
+                                <button class="btn bg-blue-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" onclick="change_value()"><sup>+</sup>/<lower>-</lower></button>
+                                <button class="btn bg-blue-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="0" onclick="return inpt_value(this.value)">0</button>
+                                <button class="btn bg-blue-500 border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" value="." onclick="return inpt_value(this.value)">.</button>
+                                <button class="btn1 bg-gray-700 text-white border-none text-2xl rounded w-20 px-2 py-2 m-1 cursor-pointer" id="equal_btn" onclick="final()" onkeypress="final()">=</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    let inp = document.querySelector('.result_input');
+                        
+                        function clear_input(){
+                            inp.value = "";
+                        }
+
+                        function inpt_value(val){
+                            inp.value += val;
+                        }
+
+                        function final(){
+                            inp.value = eval(inp.value);
+                        }
+
+                        function remove(){
+                            inp.value = inp.value.slice(0 , -1);
+                        }
+
+                        function power(){
+                            inp.value = Math.pow(inp.value,2);
+                        }
+
+                        function sqrt_value(){
+                            inp.value = Math.sqrt(inp.value);
+                        }
+
+                        function one_of(){
+                            inp.value = 1/inp.value;
+                        }
+
+                        function change_value(){
+                            if(inp.value == +(inp.value)){
+                                inp.value = -(inp.value);
+                            }
+                            else{
+                                inp.value = +(inp.value);
+                            }
+                        }
+                </script> 
+            </p>
+        </div>
+    </div>
+    <hr class="border border-black">
+</body>
+<script src="tailwind.config.js" ></script>
+</html>
